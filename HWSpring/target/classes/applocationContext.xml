@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:property-placeholder location="Car.properties"/>
+
+                           <!--CAR#1-->
+    <bean id="body"
+    class="ru.topacademy.springapp.Body" scope="prototype">
+        <property name="type" value="${body.type}"></property>
+        <property name="weight" value="${body.weight}"></property>
+        <property name="price" value="${body.price}"></property>
+    </bean>
+    <bean id="engine"
+          class="ru.topacademy.springapp.Engine" scope="prototype">
+        <property name="horsePower" value="${engine.horsePower}"></property>
+        <property name="capacity" value="${engine.capacity}"></property>
+        <property name="weight" value="${engine.weight}"></property>
+        <property name="price" value="${engine.price}"></property>
+    </bean>
+    <bean id="transmission"
+          class="ru.topacademy.springapp.Transmission" scope="prototype">
+        <property name="numberGears" value="${transmission.numberGears}"></property>
+        <property name="type" value="${transmission.type}"></property>
+        <property name="weight" value="${transmission.weight}"></property>
+        <property name="price" value="${transmission.price}"></property>
+    </bean>
+    <bean id="wheel"
+          class="ru.topacademy.springapp.Wheel" scope="prototype">
+        <property name="diameter" value="${wheel.diameter}"></property>
+        <property name="weight" value="${wheel.weight}"></property>
+        <property name="price" value="${wheel.price}"></property>
+    </bean>
+
+    <bean id="car" class="ru.topacademy.springapp.Car" scope="prototype">
+        <property name="carList">
+            <list>
+                <ref bean="body"/>
+                <ref bean="engine"/>
+                <ref bean="transmission"/>
+                <ref bean="wheel"/>
+            </list>
+        </property>
+        <property name="price" value="${car.price}"></property>
+        <property name="brend" value="${car.brend}"></property>
+        <property name="name" value="${car.name}"></property>
+        <property name="markup" value="${car.markup}"></property>
+    </bean>
+
+                          <!--CAR#2-->
+    <bean id="body2"
+          class="ru.topacademy.springapp.Body" scope="prototype">
+        <property name="type" value="${body2.type2}"></property>
+        <property name="weight" value="${body2.weight2}"></property>
+        <property name="price" value="${body2.price2}"></property>
+    </bean>
+    <bean id="engine2"
+          class="ru.topacademy.springapp.Engine" scope="prototype">
+        <property name="horsePower" value="${engine2.horsePower2}"></property>
+        <property name="capacity" value="${engine2.capacity2}"></property>
+        <property name="weight" value="${engine2.weight2}"></property>
+        <property name="price" value="${engine2.price2}"></property>
+    </bean>
+    <bean id="transmission2"
+          class="ru.topacademy.springapp.Transmission" scope="prototype">
+        <property name="numberGears" value="${transmission2.numberGears2}"></property>
+        <property name="type" value="${transmission2.type2}"></property>
+        <property name="weight" value="${transmission2.weight2}"></property>
+        <property name="price" value="${transmission2.price2}"></property>
+    </bean>
+    <bean id="wheel2"
+          class="ru.topacademy.springapp.Wheel" scope="prototype">
+        <property name="diameter" value="${wheel2.diameter2}"></property>
+        <property name="weight" value="${wheel2.weight2}"></property>
+        <property name="price" value="${wheel2.price2}"></property>
+    </bean>
+
+    <bean id="car2" class="ru.topacademy.springapp.Car2">
+        <property name="carList">
+            <list>
+                <ref bean="body2"/>
+                <ref bean="engine2"/>
+                <ref bean="transmission2"/>
+                <ref bean="wheel2"/>
+            </list>
+        </property>
+        <property name="price" value="${car2.price2}"></property>
+        <property name="brend" value="${car2.brend2}"></property>
+        <property name="name" value="${car2.name2}"></property>
+        <property name="markup" value="${car2.markup2}"></property>
+    </bean>
+
+                             <!--CAR#3-->
+    <bean id="body3"
+          class="ru.topacademy.springapp.Body">
+        <property name="type" value="${body3.type3}"></property>
+        <property name="weight" value="${body3.weight3}"></property>
+        <property name="price" value="${body3.price3}"></property>
+    </bean>
+    <bean id="engine3"
+          class="ru.topacademy.springapp.Engine">
+        <property name="horsePower" value="${engine3.horsePower3}"></property>
+        <property name="capacity" value="${engine3.capacity3}"></property>
+        <property name="weight" value="${engine3.weight3}"></property>
+        <property name="price" value="${engine3.price3}"></property>
+    </bean>
+    <bean id="transmission3"
+          class="ru.topacademy.springapp.Transmission">
+        <property name="numberGears" value="${transmission3.numberGears3}"></property>
+        <property name="type" value="${transmission3.type3}"></property>
+        <property name="weight" value="${transmission3.weight3}"></property>
+        <property name="price" value="${transmission3.price3}"></property>
+    </bean>
+    <bean id="wheel3"
+          class="ru.topacademy.springapp.Wheel">
+        <property name="diameter" value="${wheel3.diameter3}"></property>
+        <property name="weight" value="${wheel3.weight3}"></property>
+        <property name="price" value="${wheel3.price3}"></property>
+    </bean>
+
+    <bean id="car3" class="ru.topacademy.springapp.Car3" scope="prototype">
+        <property name="carList">
+            <list>
+                <ref bean="body3"/>
+                <ref bean="engine3"/>
+                <ref bean="transmission3"/>
+                <ref bean="wheel3"/>
+            </list>
+        </property>
+        <property name="price" value="${car3.price3}"></property>
+        <property name="brend" value="${car3.brend3}"></property>
+        <property name="name" value="${car3.name3}"></property>
+        <property name="markup" value="${car3.markup3}"></property>
+    </bean>
+
+                           <!--CAR#4-->
+    <bean id="body4"
+          class="ru.topacademy.springapp.Body">
+        <property name="type" value="${body4.type4}"></property>
+        <property name="weight" value="${body4.weight4}"></property>
+        <property name="price" value="${body4.price4}"></property>
+    </bean>
+    <bean id="engine4"
+          class="ru.topacademy.springapp.Engine">
+        <property name="horsePower" value="${engine4.horsePower4}"></property>
+        <property name="capacity" value="${engine4.capacity4}"></property>
+        <property name="weight" value="${engine4.weight4}"></property>
+        <property name="price" value="${engine4.price4}"></property>
+    </bean>
+    <bean id="transmission4"
+          class="ru.topacademy.springapp.Transmission">
+        <property name="numberGears" value="${transmission4.numberGears4}"></property>
+        <property name="type" value="${transmission4.type4}"></property>
+        <property name="weight" value="${transmission4.weight4}"></property>
+        <property name="price" value="${transmission4.price4}"></property>
+    </bean>
+    <bean id="wheel4"
+          class="ru.topacademy.springapp.Wheel">
+        <property name="diameter" value="${wheel4.diameter4}"></property>
+        <property name="weight" value="${wheel4.weight4}"></property>
+        <property name="price" value="${wheel4.price4}"></property>
+    </bean>
+
+    <bean id="car4" class="ru.topacademy.springapp.Car4" scope="prototype">
+        <property name="carList">
+            <list>
+                <ref bean="body4"/>
+                <ref bean="engine4"/>
+                <ref bean="transmission4"/>
+                <ref bean="wheel4"/>
+            </list>
+        </property>
+        <property name="price" value="${car4.price4}"></property>
+        <property name="brend" value="${car4.brend4}"></property>
+        <property name="name" value="${car4.name4}"></property>
+        <property name="markup" value="${car4.markup4}"></property>
+    </bean>
+</beans>
